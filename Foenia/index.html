@@ -184,7 +184,7 @@
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'https://twikoo-1786022581.vercel.app/',
+      envId: 'https://twikoo.unnamed-urs-loadingnow.cloud',
       region: 'ap-hangzhou',
       onCommentLoaded: function () {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -196,7 +196,7 @@
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'https://twikoo-1786022581.vercel.app/',
+      envId: 'https://twikoo.unnamed-urs-loadingnow.cloud',
       region: 'ap-hangzhou',
       urls: [window.location.pathname],
       includeReply: false
@@ -209,7 +209,7 @@
 
   const runFn = () => {
     init()
-    GLOBAL_CONFIG_SITE.isPost && getCount()
+    
   }
 
   const loadTwikoo = () => {
@@ -220,8 +220,8 @@
     getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
   }
 
-  if ('Twikoo' === 'Twikoo' || !true) {
-    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
     else loadTwikoo()
   } else {
     window.loadOtherComment = () => {
